@@ -22,8 +22,8 @@ public class Brick : MonoBehaviour
         health--;
         if (health <= 0)
         {
-            FindObjectOfType<LevelLoader>().DeductBrick();
-            FindObjectOfType<LevelController>().IncreaseScore();
+            FindFirstObjectByType<LevelLoader>().DeductBrick();
+            FindFirstObjectByType<LevelController>().IncreaseScore();
             Destroy(gameObject);
         }
         else

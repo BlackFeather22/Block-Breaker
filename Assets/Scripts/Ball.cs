@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<LevelController>().DecreaseLives();
+        FindFirstObjectByType<LevelController>().DecreaseLives();
         Destroy(gameObject);
     }
     IEnumerator DelayStart()

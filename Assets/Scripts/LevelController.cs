@@ -14,7 +14,7 @@ public class LevelController : MonoBehaviour
 
     private void Awake()
     {
-        LevelController[] objs = FindObjectsOfType<LevelController>();
+        LevelController[] objs = FindObjectsByType<LevelController>(FindObjectsInactive.Exclude,FindObjectsSortMode.None);
 
         if (objs.Length > 1)
         {

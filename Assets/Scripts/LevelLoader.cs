@@ -13,7 +13,7 @@ public class LevelLoader : MonoBehaviour
     }
     private void CountAllBricks()
     {
-        Brick[] allBricksInLevel = FindObjectsOfType<Brick>();
+        Brick[] allBricksInLevel = FindObjectsByType<Brick>(FindObjectsInactive.Exclude,FindObjectsSortMode.None);
         brickCount = allBricksInLevel.Length;
     }
 
